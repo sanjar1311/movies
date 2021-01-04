@@ -10,12 +10,16 @@ var elSelector = document.querySelector('.js-selector');
 var elGenreOutput = document.querySelector('.js-genre-output');
 
 
+
 elNameForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
 
-  var kinoo = kinolar.filter(function (kinoName) {
-    return elNameInput.value === kinoName.title;
-  });
+
+       var kinoo = kinolar.filter(function (kinoName) {
+         return kinoName.title.includes(elNameInput.value);
+      });
+
+
 
 
   var itemFragment = document.createDocumentFragment();
@@ -38,6 +42,8 @@ elNameForm.addEventListener('submit', function(evt) {
 
   elNameOutput.appendChild(itemFragment);
 });
+
+/* ================================================================================================================ */
 
 /* ================================================================================================================ */
 
@@ -127,6 +133,5 @@ for(var i = 0; i < arr.length; i++) {
   genreOption.value = arr[i];
   genreOption.textContent = arr[i];
   elOptionFragment.appendChild(genreOption);
-  console.log(genreOption)
 }
 elSelector.appendChild(elOptionFragment);
