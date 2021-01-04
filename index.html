@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Bootstrap starter</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Bootstrap starter</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="jumbotron">
 
-    <div class="container text-center">Lorem ipsum dolor sit amet.</div>
+  <div class="d-flex w-75 mx-auto">
+    <div class="w-50">
+      <form class="js-name-form mr-3" action="https://echo.htmlacademy.ru" method="GET">
+        <input class="js-name-input form-control" type="text" placeholder="Name">
+      </form>
+      <ul class="js-name-output list-group"></ul>
+    </div>
 
+    <div class="w-50">
+      <form class="js-genre-form mr-3" action="https://echo.htmlacademy.ru" method="GET">
+        <div>
+          <select class="form-control js-selector w-100">
+            <option selected disabled>Genres</option>
+          </select>
+        </div>
+      </form>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
+      <ul class="js-genre-output"></ul>
+    </div>
+
+    <div>
+      <form class="js-year-form mr-3" action="https://echo.htmlacademy.ru" method="GET">
+        <input class="js-year-input form-control" type="number" placeholder="Year">
+      </form>
+      <ul class="js-year-output"></ul>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/kinolar.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
